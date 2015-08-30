@@ -2,7 +2,8 @@
 
 CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
-echo $CURR_BRANCH $DIR_CHANGES
+echo this is current branch $CURR_BRANCH
+echo this is directory changes $DIR_CHANGES
 
 if [[ DIR_CHANGES == *"migrations/"* ]]
 then
