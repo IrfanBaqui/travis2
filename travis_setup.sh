@@ -4,7 +4,7 @@ CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
 echo $CURR_BRANCH $DIR_CHANGES
 
-if [[ DIR_CHANGES == *"/migrations"* ]]
+if [[ DIR_CHANGES == *"migrations/"* ]]
 then
   echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2

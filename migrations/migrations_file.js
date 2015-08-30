@@ -1,3 +1,3 @@
 //this is migrations file
 
-var migrations = "test1";
+var migrations = "test11";
