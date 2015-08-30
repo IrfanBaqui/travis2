@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo hi there
 CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
 
