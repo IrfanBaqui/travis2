@@ -6,7 +6,7 @@ echo this is current branch $CURR_BRANCH
 echo this is directory changes $DIR_CHANGES
 echo this is comparison $( DIR_CHANGES == *"migrations/"* )
 
-if [[ DIR_CHANGES = *"migrations/"* ]]
+if [[ $DIR_CHANGES = *"migrations/"* ]]
 then
   echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2
