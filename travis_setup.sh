@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo hi there
 CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
+echo $CURR_BRANCH $DIR_CHANGES
 
 if [[ DIR_CHANGES == *"/migrations"* ]]
 then
@@ -17,7 +17,7 @@ then
   npm test;
 fi
 
-if [[ DIR_CHANGES == *"/migrations"* ]]
+if [[ DIR_CHANGES != *"/migrations"* ]]
 then
   echo "It's NOT there!";
 fi
