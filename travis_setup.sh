@@ -10,7 +10,7 @@ if [[ $DIR_CHANGES = *"migrations/"* ]]
 then
   echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2
-  cd travis
+  cd travis2
   git checkout remotes/origin/latest_release
   # git checkout -b backward_compatibility_test
   git rm -r migrations
