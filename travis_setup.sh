@@ -15,6 +15,10 @@ then
   # git checkout -b backward_compatibility_test
   git rm -r migrations
   git checkout remotes/origin/migration_change -- migrations
+  ls
+  cat ./migrations/migrations_file.js
+  echo "syntax error" >> ./migrations/migrations_file.js
+  cat ./migrations/migrations_file.js
   npm install
   npm test;
 fi
