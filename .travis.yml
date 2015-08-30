@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '0.10'
+before_script:
+ - chmod +x travis_setup.sh
+after_script:
+- ./travis_setup.sh
+env:
+  global:
+    secure: silq5nWbDV2x8z1lWAMi4uaxye8JYhNx3PSbmTnMR3lDhl+cPsY1SNhFtK3v+JH6YsH/Oa+3UYud8K2iQzoI7ADMdH1LNLlB8nJ/XFYzC2tprRWVQyDdQcN6xrS1sWjTrYVBBprdzIezqbs9ck6nQmakf0WbJZyFdoJ+yLLRHpBJQ/RMGm0Xd1SIgNzyjh9DCanb4o/5NB96Y1MfJaptMTxftlYhkm1ipO64WT+fIFsSZztDqPd45yVLKQYVXBVqU64+GiiYIjvMdm0hZHUfAtC/MXd5a+Half4GLC+LCY5RzUmFlJL1rrOBH8gbnelqeSy2kBhOKcUK/jYQECf6JY3NpcUhmhiSDiGLE/z3CtQg5TmlXe53iMBcIRVf8ZRfwy+x0aEA7MUrxcR/GihorkBvH26brWdHNvdIToGmin/DcIolJMuAtbUlFtYg9qurceDWdnc/hjkOCZKe+l4+bdMlGyhe3kxtBYZiPYhncdJuMkETodHQnMOe/4AZ+uORFcRjDtyCzBAVcpeDvbeGV1H7bKEo5BXw8Cqi30flEcDaHucGNsjwbbdkvm1R5Gcz5I/7LHgELCNflXmG/XMP1aMTBDADZH/k8A6R/W9sdwd8wIrJUBknxPQWnNX6HT/8jwtNGIeFQlnFSFqNNAlbvZ2W/h0y0eD1Re4D83pPtPE=
