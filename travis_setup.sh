@@ -4,8 +4,9 @@ CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
 echo this is current branch $CURR_BRANCH
 echo this is directory changes $DIR_CHANGES
+echo this is comparison $( DIR_CHANGES == *"migrations/"* )
 
-if [[ DIR_CHANGES == *"migrations/"* ]]
+if [[ DIR_CHANGES = *"migrations/"* ]]
 then
   echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2
