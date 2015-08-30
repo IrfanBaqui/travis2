@@ -11,7 +11,7 @@ then
   echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2
   cd travis
-  git checkout latest_release
+  git checkout remotes/origin/latest_release
   # git checkout -b backward_compatibility_test
   git rm -r migrations
   git checkout remotes/origin/migration_change -- migrations
