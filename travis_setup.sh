@@ -5,7 +5,7 @@ DIR_CHANGES=$( git show --name-only --pretty=oneline )
 
 if [[ DIR_CHANGES == *"/migrations"* ]]
 then
-  echo "It's there!";
+  echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2
   cd travis
   git checkout latest_release
@@ -13,5 +13,10 @@ then
   git rm -r migrations
   git checkout remotes/origin/migration_change -- migrations
   npm install
-  npm test
+  npm test;
+fi
+
+if [[ DIR_CHANGES == *"/migrations"* ]]
+then
+  echo "It's NOT there!";
 fi
