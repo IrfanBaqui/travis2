@@ -1,3 +1,3 @@
 //this is migrations file
 
-var migrations = "test_changed_changed_changed_changed";
+var migrations = "test_changed_changed_changed_changedll";
