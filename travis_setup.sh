@@ -13,7 +13,7 @@ echo !$TRAVIS_PULL_REQUEST
 echo $TRAVIS_PULL_REQUEST
 echo $DIR_CHANGES
 
-if [[ "$TRAVIS_PULL_REQUEST" = "false" $DIR_CHANGES = *"migrations/"* ]]
+if [[ $TRAVIS_PULL_REQUEST = "false" $DIR_CHANGES = *"migrations/"* ]]
 then
 
 	CURR_BRANCH=$( git rev-parse HEAD )
