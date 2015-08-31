@@ -26,7 +26,7 @@ DIR_CHANGES=$( git show --name-only --pretty=oneline )
   cd travis2
   git checkout remotes/origin/latest_release
   git diff --name-status --color remotes/origin/latest_release..remotes/origin/migration_change
-  git diff --name-status --color remotes/origin/latest_release..CURR_BRANCH
+  git diff --name-status --color remotes/origin/latest_release..$CURR_BRANCH
   git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master)
   git diff --name-only $CURR_BRANCH
   # git checkout -b backward_compatibility_test
