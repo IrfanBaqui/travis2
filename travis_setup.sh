@@ -9,6 +9,10 @@ set -v
 # Run tests
 npm test
 
+echo !$TRAVIS_PULL_REQUEST
+echo $TRAVIS_PULL_REQUEST
+echo $DIR_CHANGES
+
 if [[ !$TRAVIS_PULL_REQUEST ]] && [[ $DIR_CHANGES = *"migrations/"* ]]
 then
 
