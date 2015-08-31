@@ -6,6 +6,9 @@ set -e
 # Print shell input lines as they are read
 set -v
 
+# Run tests
+npm run test-ci
+
 CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
 echo this is current branch $CURR_BRANCH
