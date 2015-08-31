@@ -10,17 +10,19 @@ set -v
 npm test
 
 CURR_BRANCH=$( git rev-parse HEAD )
+git rev-parse latest_release
+git rev-parse migration_change
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
-echo this is current branch $CURR_BRANCH
-echo this is directory changes $DIR_CHANGES
-echo this is comparison $( DIR_CHANGES == *"migrations/"* )
 
-if [[ $DIR_CHANGES = *"migrations/"* ]]
-then
-  echo "It's there!"
+# if [[ $DIR_CHANGES = *"migrations/"* ]]
+# then
+  # echo "It's there!"
   git clone https://github.com/IrfanBaqui/travis2
   cd travis2
   git checkout remotes/origin/latest_release
+  git diff --name-status --color remotes/origin/latest_release..remotes/origin/migration_change
+  git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master)
+  git diff --name-only $CURR_BRANCH
   # git checkout -b backward_compatibility_test
   git rm -r migrations
   git checkout remotes/origin/migration_change -- migrations
@@ -30,6 +32,6 @@ then
   cat ./migrations/migrations_file.js
   npm install
   npm test;
-fi
+# fi
 
 exit 0
