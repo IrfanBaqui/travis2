@@ -25,13 +25,12 @@ DIR_CHANGES=$( git show --name-only --pretty=oneline )
   git clone https://github.com/IrfanBaqui/travis2
   cd travis2
   git checkout remotes/origin/latest_release
-  git diff --name-status --color remotes/origin/latest_release..remotes/origin/migration_change
+  # git diff --name-status --color remotes/origin/latest_release..remotes/origin/migration_change
   git diff --name-status --color remotes/origin/latest_release..$CURR_BRANCH
-  git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD master)
-  git diff --name-only $CURR_BRANCH
   # git checkout -b backward_compatibility_test
   git rm -r migrations
-  git checkout remotes/origin/migration_change -- migrations
+  # git checkout remotes/origin/migration_change -- migrations
+  git checkout $CURR_BRANCH -- migrations
   ls
   cat ./migrations/migrations_file.js
   echo "syntax error" >> ./migrations/migrations_file.js
