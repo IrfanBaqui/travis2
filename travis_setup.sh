@@ -9,6 +9,7 @@ set -v
 # Run tests
 npm test
 
+DIR_CHANGES=$( git show --name-only --pretty=oneline )
 echo !$TRAVIS_PULL_REQUEST
 echo $TRAVIS_PULL_REQUEST
 echo $DIR_CHANGES
