@@ -41,7 +41,7 @@ then
 	  git checkout $CURR_BRANCH -- migrations
 	  ls
 	  cat ./migrations/migrations_file.js
-	  # echo "syntax error" >> ./migrations/migrations_file.js
+	  echo "syntax error" >> ./migrations/migrations_file.js
 	  cat ./migrations/migrations_file.js
 	  npm install
 	  npm test;
