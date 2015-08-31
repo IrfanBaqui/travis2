@@ -10,8 +10,10 @@ set -v
 npm test
 
 CURR_BRANCH=$( git rev-parse HEAD )
+CURR_BRANCH_NAME=$( git rev-parse --abbrev-ref HEAD )
 git branch -a
-echo CURR_BRANCH
+echo $CURR_BRANCH
+echo $CURR_BRANCH_NAME
 # git rev-parse remotes/origin/latest_release
 # git rev-parse remotes/origin/migration_change
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
