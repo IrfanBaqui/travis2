@@ -7,7 +7,7 @@ set -e
 set -v
 
 # Run tests
-npm run test-ci
+npm test
 
 CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
