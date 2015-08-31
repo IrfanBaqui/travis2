@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Print shell input lines as they are read
+set -v
+
 CURR_BRANCH=$( git rev-parse HEAD )
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
 echo this is current branch $CURR_BRANCH
@@ -23,7 +29,4 @@ then
   npm test;
 fi
 
-if [[ $DIR_CHANGES != *"/migrations"* ]]
-then
-  echo "It's NOT there!";
-fi
+exit 0
