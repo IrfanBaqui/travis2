@@ -9,7 +9,7 @@ set -v
 # Run tests
 npm test
 
-if [[ !$TRAVIS_PULL_REQUEST ]]
+if [[ !$TRAVIS_PULL_REQUEST ]] && [[ $DIR_CHANGES = *"migrations/"* ]]
 then
 
 	CURR_BRANCH=$( git rev-parse HEAD )
