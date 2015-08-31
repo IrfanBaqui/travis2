@@ -11,7 +11,7 @@ npm test
 
 CURR_BRANCH=$( git rev-parse HEAD )
 CURR_BRANCH_NAME=$( git rev-parse --abbrev-ref HEAD )
-CURR_BRANCH_NAME_2 =$( git rev-parse --abbrev-ref HEAD )
+CURR_BRANCH_NAME_2=$( git rev-parse --abbrev-ref HEAD )
 git branch -a
 echo $CURR_BRANCH
 echo $CURR_BRANCH_NAME
