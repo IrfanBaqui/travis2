@@ -10,8 +10,8 @@ set -v
 npm test
 
 CURR_BRANCH=$( git rev-parse HEAD )
-git rev-parse latest_release
-git rev-parse migration_change
+git rev-parse remotes/origin/latest_release
+git rev-parse remotes/origin/migration_change
 DIR_CHANGES=$( git show --name-only --pretty=oneline )
 
 # if [[ $DIR_CHANGES = *"migrations/"* ]]
