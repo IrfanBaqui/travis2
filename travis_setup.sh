@@ -14,7 +14,7 @@ DIR_CHANGES=$( git show --name-only --pretty=oneline )
 if [[ $TRAVIS_PULL_REQUEST = "false" && $DIR_CHANGES = *"migrations/"* ]]
 then
 	CURR_BRANCH=$( git rev-parse HEAD )
-  echo CURR_BRANCH
+  echo $CURR_BRANCH
 	echo $TRAVIS_BRANCH #commit with migration_change
 	echo $TRAVIS_COMMIT
 	echo $TRAVIS_PULL_REQUEST
